@@ -16,7 +16,7 @@
 </footer>
 
 <script>
-  document.getElementById('copy-right').innerHTML = `&copy; ${new Date().getFullYear()} NTKhang`;
+  document.getElementById('copy-right').innerHTML = `&copy; ${new Date().getFullYear()} Itz HA SA N`;
 </script>
 </body>
 
