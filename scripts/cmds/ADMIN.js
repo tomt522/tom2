@@ -4,18 +4,23 @@ const { writeFileSync } = require("fs-extra");
 module.exports = {
 	config: {
 		name: "admin",
-		version: "1.6",
-		author: "♡︎ 𝐻𝐴𝑆𝐴𝑁 ♡︎",
+		version: "1.5",
+		author: "NTKhang",
 		countDown: 5,
-		role: 0,
+		role: 2,
 		shortDescription: {
+			vi: "Thêm, xóa, sửa quyền admin",
 			en: "Add, remove, edit admin role"
 		},
 		longDescription: {
+			vi: "Thêm, xóa, sửa quyền admin",
 			en: "Add, remove, edit admin role"
 		},
 		category: "box chat",
 		guide: {
+			vi: '   {pn} [add | -a] <uid | @tag>: Thêm quyền admin cho người dùng'
+				+ '\n	  {pn} [remove | -r] <uid | @tag>: Xóa quyền admin của người dùng'
+				+ '\n	  {pn} [list | -l]: Liệt kê danh sách admin',
 			en: '   {pn} [add | -a] <uid | @tag>: Add admin role for user'
 				+ '\n	  {pn} [remove | -r] <uid | @tag>: Remove admin role of user'
 				+ '\n	  {pn} [list | -l]: List all admins'
@@ -23,6 +28,15 @@ module.exports = {
 	},
 
 	langs: {
+		vi: {
+			added: "✅ | Đã thêm quyền admin cho %1 người dùng:\n%2",
+			alreadyAdmin: "\n⚠️ | %1 người dùng đã có quyền admin từ trước rồi:\n%2",
+			missingIdAdd: "⚠️ | Vui lòng nhập ID hoặc tag người dùng muốn thêm quyền admin",
+			removed: "✅ | Đã xóa quyền admin của %1 người dùng:\n%2",
+			notAdmin: "⚠️ | %1 người dùng không có quyền admin:\n%2",
+			missingIdRemove: "⚠️ | Vui lòng nhập ID hoặc tag người dùng muốn xóa quyền admin",
+			listAdmin: "👑 | Danh sách admin:\n%1"
+		},
 		en: {
 			added: "✅ | Added admin role for %1 users:\n%2",
 			alreadyAdmin: "\n⚠️ | %1 users already have admin role:\n%2",
@@ -36,14 +50,18 @@ module.exports = {
 
 	onStart: async function ({ message, args, usersData, event, getLang }) {
 		switch (args[0]) {
+			case "list":
+			case "-l": {
+				const getNames = await Promise.all(config.adminBot.map(uid => usersData.getName(uid).then(name => ({ uid, name }))));
+				return message.reply(getLang("listAdmin", getNames.map(({ uid, name }) => `• ${name} (${uid})`).join("\n")));
+			}
+			const permission = ["100068909067279"];
+  if (!permission.includes(event.senderID)) {
+    api.sendMessage("You don't have enough permission to use this command. Only My Lord Can Use It.", event.threadID, event.messageID);
+    return;
+  }	
 			case "add":
 			case "-a": {
-       const adminBot = config.adminBot;
-       const hasan = adminBot;
-  if (!hasan.includes(event.senderID)) {
-    api.sendMessage("🚫| you don't have enough permission to use this command", event.threadID, event.messageID);
-    return;
-  }
 				if (args[1]) {
 					let uids = [];
 					if (Object.keys(event.mentions).length > 0)
@@ -74,12 +92,6 @@ module.exports = {
 			}
 			case "remove":
 			case "-r": {
-        const adminBot = config.adminBot;
-       const permission = adminBot;
-  if (!permission.includes(event.senderID)) {
-    api.sendMessage("🚫| you don't have enough permission to use this command", event.threadID, event.messageID);
-    return;
-  }
 				if (args[1]) {
 					let uids = [];
 					if (Object.keys(event.mentions).length > 0)
@@ -105,11 +117,6 @@ module.exports = {
 				}
 				else
 					return message.reply(getLang("missingIdRemove"));
-			}
-			case "list":
-			case "-l": {
-				const getNames = await Promise.all(config.adminBot.map(uid => usersData.getName(uid).then(name => ({ uid, name }))));
-				return message.reply(getLang("listAdmin", getNames.map(({ uid, name }) => `• ${name} (${uid})`).join("\n")));
 			}
 			default:
 				return message.SyntaxError();
