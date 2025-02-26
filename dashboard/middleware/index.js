@@ -14,7 +14,7 @@ module.exports = function (checkAuthConfigDashboardOfThread) {
 				return res.status(401).send({
 					status: "error",
 					error: "PERMISSION_DENIED",
-					message: "Assalamualaikum welcome to HASAN's bot ptofile"
+					message: "please try again later"
 				});
 
 			req.flash("errors", { msg: "You must be logged in" });
@@ -58,7 +58,7 @@ module.exports = function (checkAuthConfigDashboardOfThread) {
 				return res.status(401).send({
 					status: "error",
 					error: "PERMISSION_DENIED",
-					message: "Đã xảy ra lỗi, vui lòng thử lại"
+					message: "An error occurred, please try again"
 				});
 
 			res.redirect("/register");
@@ -87,10 +87,10 @@ module.exports = function (checkAuthConfigDashboardOfThread) {
 					return res.status(401).send({
 						status: "error",
 						error: "PERMISSION_DENIED",
-						message: "Bạn không phải là thành viên nhóm này"
+						message: "This group was not found."
 					});
 
-				req.flash("errors", { msg: "Bạn không ở trong nhóm chat này" });
+				req.flash("errors", { msg: "You are not in this chat group" });
 				return res.redirect("/dashboard");
 			}
 			req.threadData = threadData;
@@ -122,7 +122,7 @@ module.exports = function (checkAuthConfigDashboardOfThread) {
 					return res.status(401).send({
 						status: "error",
 						error: "PERMISSION_DENIED",
-						message: "Bạn không phải là admin của bot"
+						message: "you are not admin for this bot"
 					});
 
 				req.flash("errors", { msg: "Bạn không phải là admin của bot" });
