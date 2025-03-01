@@ -22,13 +22,11 @@
 		"100068909067279",
 		"61566489099389",
 		"100083557261851", 
-		"61550792093826",
-		"100074655721917",
-		"61559946582981"
+		"61571469025033"
 	],
 	"whiteListMode": {
 		"enable": false,
-		"whiteListIds": ["100068909067279"],
+		"whiteListIds": [],
 		"notes": "if you enable this feature, only the ids in the whiteListIds list can use the bot"
 	},
 	"whiteListModeThread": {
@@ -39,7 +37,7 @@
 	},
 	"database": {
 		"type": "mongodb",
-		"uriMongodb": "mongodb+srv://toxiciter:Hasan5&7@toxiciter.9tkfu.mongodb.net/GoatBotV2?retryWrites=true&w=majority&appName=Toxiciter",
+		"uriMongodb": "mongodb+srv://nazrul4x:Nazrul007@nazrul4x.cmja2.mongodb.net/unknown-v3?retryWrites=true&w=majority&appName=nazrul4x",
 		"autoSyncWhenStart": false,
 		"autoRefreshThreadInfoFirstTime": true,
 		"notes": "(1) type selects 'json' or 'sqlite' or 'mongodb'. If you choose mongodb, enter uri connect mongodb in the uriMongodb section, instructions to get uri connect mongodb at: https://youtu.be/z1f9urHW5xY. I recommend using 'mongodb' or 'sqlite', json is not recommended because it is not stable. (2) when you set autoSyncWhenStart to true, the bot will automatically synchronize the data in the database when starting the bot, this will make the bot start slower. (3) when you set autoRefreshThreadInfoFirstTime to true, the bot will automatically refresh the thread information when get first message from the thread since starting the bot"
@@ -47,15 +45,15 @@
 	"timeZone": "Asia/Ho_Chi_Minh",
 	"credentials": {
 		"gmailAccount": {
-			"email": "s.khasanmahamud324@gmail.com",
-			"clientId": "1038587958316-ugoqskt5s8itgca98ahjulp4691lhd9v.apps.googleusercontent.com",
-			"clientSecret": "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",
-			"refreshToken": "1//04ra2waD4ABt3CgYIARAAGAQSNgF-L9IrYkOHdKbzJwt5kMXGWgdKgc2aF3CxAdJ96G-113vAhZZR2L1fFuzCVslX_QvBGv2R0w",
+			"email": "s.k.hasan32425@gmail.com",
+			"clientId": "739088656170-b2f6h2hvr5dvbbd45nopfnkmkgnqvsgc.apps.googleusercontent.com",
+			"clientSecret": "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",
+			"refreshToken": "1//04wkiKCjQiF6iCgYIARAAGAQSNwF-L9IrV_63MxZWIBAaGPX99vEY61q0AmY9Q2b29fbeT9bzFlwK3kqmJa5MytfJm784I9PKUqU",
 			"apiKey": ""
 		},
 		"gRecaptcha": {
-			"siteKey": "6Lelgd8qAAAAALgjE241rURCvAp5Sfytc4m3XCqD",
-			"secretKey": "6Lelgd8qAAAAALr-7Y9SxiCAbfpWFbFJdxWup4Ne"
+			"siteKey": "6LeU7LcqAAAAAOn6-dnKdRmuCb-x5_Puynxjtpcw",
+			"secretKey": "6LeU7LcqAAAAABxGSj6pv5uPb488JOZcTgp4nwRT"
 		}
 	},
 	"dashBoard": {
