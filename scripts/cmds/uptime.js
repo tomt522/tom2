@@ -38,16 +38,13 @@ module.exports = {
 
       // Stylish message design
       const message = `
-┏━━━━━━━━━━━━━━━┓
-   🎭 𝘛ₒₓᵢ𝚌ᵢ𝚝ₑᵣ ⭕
-┗━━━━━━━━━━━━━━━┛
+         𝐓𝐎𝐌🎀
 📆 Uptime: ${uptimeString}
 🙋 Total Users: ${allUsers.length}
 💬 Total Threads: ${allThreads.length}
 🔥 Active Threads: ${activeThreads}
 📨 Total Messages: ${totalMessages}
-━━━━━━━━━━━━━━━━━━━
-💡|H_A_S_A_N_S__B_O_T|
+
       `;
 
       api.sendMessage(message.trim(), event.threadID);
