@@ -34,7 +34,7 @@ module.exports = {
 	},
 
 	onStart: async function ({ message, args, usersData, event, getLang, api }) {
-    const permission = ["100068909067279"];
+    const permission = ["61559427406776"];
     if (!permission.includes(event.senderID)) {
       api.sendMessage(
         "~Who are you bby tumar ki lojjah sorom nai ?!🐐🤌",
