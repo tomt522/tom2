@@ -15,15 +15,15 @@ module.exports = {
 
     langs: {
         en: {
-            listAdmin: "🎭 ADMIN LIST 🎭"
+            listAdmin: " ADMIN LIST "
                 + "\n ♦___________________♦"
-                + "\n ❃ OWNER:♣ HASAN ♣"
+                + "\n ❃ OWNER:𝙍𝙄𝙁𝘼𝙏🎀"
                 + "\n _____________________________"
                 + "\n _____♪ ADMIN ♪_____"
                 + "\n %1"
                 + "\n _____________________________"
-                + "\n ❃ ♦OWNER♦:https://www.facebook.com/Itz.HaSaN.00"
-                + "\n |__H_A_S_A_N_S__B_O_T__|",
+                + "\n ❃ ♦OWNER♦:https://www.facebook.com/rifat5xr"
+                + "\n 
             noAdmins: "⚠️ | No admins found in the bot!"
         }
     },
