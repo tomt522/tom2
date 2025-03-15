@@ -17,14 +17,14 @@ module.exports = {
 	onStart: async function ({ api, event }) {
 		try {
 			const ownerInfo = {
-				name: '𝙄𝙩𝙯 𝙃𝘼𝙎𝘼𝙉',
+				name: '𝙍𝙞𝙛𝙖𝙩 𝙅𝙖𝙢𝙞𝙡',
 				gender: '𝗠𝗮𝗹𝗲',
-				Birthday: '𝟐𝟐-𝟎𝟕-𝟐𝟎𝟎𝟖',
+				Birthday: '𝟐𝟑-𝟏𝟏-𝟐𝟎𝟎𝟖',
 				religion: '𝙄𝙨𝙡𝙖𝙢',
-				hobby: '𝙎𝙡𝙚𝙚𝙥𝙞𝙣𝙜',
-				Fb: 'https://www.facebook.com/Itz.HaSaN.00',
+				hobby: '𝙁𝙡𝙞𝙧𝙩𝙞𝙣𝙜',
+				Fb: 'https://www.facebook.com/rifat5xr',
 				Relationship: '𝙎𝙞𝙣𝙜𝙡𝙚',
-				Height: '5"4'
+				Height: 'Jaina lav nai'
 			};
 
 			const bold = 'https://imgur.com/PA1SJH9.mp4';
